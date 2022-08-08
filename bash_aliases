@@ -1,0 +1,24 @@
+#!/usr/bin/bash
+
+ # some more  aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias rm='rm -iv'
+alias mv='mv -iv'
+alias cls='clear'
+alias nano='nano -l'
+alias mv='mv -iv'
+alias cp='cp -p -a -i'
+alias tmux='tmux new -s RONDIA \; split-window \; select-layout even-horizontal'
+alias idle='/usr/bin/idle-python3.8'
+alias zcc="gcc -g -lefence -Wall -Werror -Wreturn-type -Wextra -pedantic -std=c11"
+alias ccW="gcc -g -Wall "
+#alias cc89='gcc -g -Wall -Werror -Wextra -pedantic -std=c89'
+alias cc90='gcc -g -Wall -Werror -Wextra -pedantic -std=c90'
+alias indentme='indent -bl'
+alias ccE='cc -E'
+alias ccC='cc -c'
+alias cpp11='g++ -g -Wall -Wextra -pedantic -Werror -std=c++11'
+alias cpp17='g++ -g -Wall -pedantic -Werror -std=c++17'
+
