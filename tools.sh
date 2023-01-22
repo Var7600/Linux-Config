@@ -7,4 +7,5 @@ sudo apt install code -y
 sudo apt install cppcheck -y 
 sudo apt install cppcheck-gui -y
 sudo aot install tmux -y
+sudo apt install ddd -y
 #sudo apt-get install meld
