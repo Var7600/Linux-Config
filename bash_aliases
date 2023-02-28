@@ -12,7 +12,7 @@ alias mv='mv -iv'
 alias cp='cp -p -a -i'
 alias tmux='tmux new -s RONDIA \; split-window \; select-layout even-horizontal'
 alias idle='/usr/bin/idle-python3.8'
-alias zcc="gcc -g  -Wall -Werror -Wreturn-type -Wmain -Winfinite-recursion -Wformat-overflow -Wextra -pedantic -std=c11"
+alias zcc="gcc -g  -Wall -Werror -Wreturn-type -Wmain -Wformat-overflow -Wextra -pedantic -std=c11"
 alias ccW="gcc -g -Wall "
 #alias cc89='gcc -g -Wall -Werror -Wextra -pedantic -std=c89'
 alias cc90='gcc -g -Wall -Werror -Wextra -pedantic -std=c90'
@@ -22,5 +22,8 @@ alias ccC='cc -c'
 alias cpp11='g++ -g -Wall -Wextra -pedantic -Werror -std=c++11'
 alias cpp17='g++ -g -Wall -pedantic -Werror -std=c++17'
 
-alias zcp="g++ -g  -Wall -Werror -Wmain -Winfinite-recursion -Wformat-overflow -Wreturn-type -Wextra -pedantic "
+alias zcp="g++ -g  -Wall -Werror -Wmain  -Wformat-overflow -Wreturn-type -Wextra -pedantic "
 alias ccW="gcc -g -Wall "
+alias gs="git status"
+alias gc="git commit -m"
+alias gp="git push"
