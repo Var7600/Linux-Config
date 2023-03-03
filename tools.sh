@@ -8,4 +8,6 @@ sudo apt install cppcheck -y
 sudo apt install cppcheck-gui -y
 sudo aot install tmux -y
 sudo apt install ddd -y
+sudo apt install codeblocks -y
+
 #sudo apt-get install meld
