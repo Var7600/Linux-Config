@@ -2,9 +2,13 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# script rm_Secure
+if [ -d ~/Script/Save/ ];then
+		. ~/Script/Save/rm_secure.sh
+fi
 
  #Extend path
-export PATH="$PATH:$HOME/Script/system:$HOME/Script/C:$HOME/tux/.local/bin:/home/tux/Téléchargements/sqldeveloper/sqldeveloper/bin:/home/tux/anaconda3/condabin/conda"
+export PATH="$PATH:$HOME/Script/System"
 
 export VISUAL=vim
 
