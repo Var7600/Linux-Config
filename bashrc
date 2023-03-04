@@ -8,7 +8,7 @@ if [ -d ~/Script/Save/ ];then
 fi
 
  #Extend path
-export PATH="$PATH:$HOME/Script/System"
+export PATH="$PATH:$HOME/Script/"
 
 export VISUAL=vim
 
