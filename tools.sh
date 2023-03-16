@@ -14,3 +14,4 @@ sudo apt install ncdu -y
 #sudo apt-get install meld
 sudo apt install fzf -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Bhupesh-V/ugit/master/install)"
+sudo apt install xcas giac-doc
