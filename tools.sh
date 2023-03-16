@@ -6,6 +6,7 @@ sudo apt install most -y
 #sudo apt install code -y
 sudo apt install cppcheck -y 
 sudo apt install cppcheck-gui -y
+sudo apt install shellcheck -y
 sudo aot install tmux -y
 sudo apt install ddd -y
 sudo apt install codeblocks -y
