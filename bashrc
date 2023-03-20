@@ -3,8 +3,8 @@
 # for examples
 
 # script rm_Secure
-if [ -d ~/Script/Save/ ];then
-		. ~/Script/Save/rm_secure.sh
+if [ -d ~/Script/ ];then
+		. ~/Script/rm_secure.sh
 fi
 
  #Extend path
@@ -22,12 +22,12 @@ if [ -f ~/Script/prompt/costumize.sh ];then
 	. ~/Script/prompt/costumize.sh
 fi
 
-#bash-git-prompt
-if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
-    GIT_PROMPT_ONLY_IN_REPO=1
-    source $HOME/.bash-git-prompt/gitprompt.sh
-fi
-	
+
+#add Miniconda Path 
+#if ! [[ $PATH =~ "$HOME/miniconda3/bin" ]]; then
+#  PATH="$HOME/miniconda3/bin:$PATH"
+#fi
+
 #ADD: info at start
 w
 
@@ -167,17 +167,22 @@ b2d(){
 d2b(){
   echo "obase=2; $@" | tr -s ' ' ';' | bc
 }
+#Add Miniconda
+
+if ! [[ $PATH =~ "$HOME/miniconda3/bin" ]]; then
+  PATH="$HOME/miniconda3/bin:$PATH"
+fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/tux/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/vboxuser/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/tux/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/tux/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/vboxuser/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/vboxuser/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/tux/anaconda3/bin:$PATH"
+        export PATH="/home/vboxuser/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
