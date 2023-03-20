@@ -26,6 +26,11 @@ else
 	cp ./tmux.conf ~/.tmux.conf
 fi
 
+#install miniconda
+if [ -e ./miniconda.sh ];then
+	./miniconda.sh
+fi
+
 #restart shell
 source ~/.bashrc
 
