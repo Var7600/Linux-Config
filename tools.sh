@@ -17,3 +17,4 @@ sudo apt install fzf -y
 sudo apt install w3m w3m-img
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Bhupesh-V/ugit/master/install)"
 sudo apt install xcas giac-doc
+sudo apt install konsole
