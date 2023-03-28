@@ -16,6 +16,16 @@ fi
 #copie folder Script to HOME
 cp -R ./Script/ ~/
 
+#git config file
+if [ -e ~/.gitconfig ];then
+	mv ~/.gitconfig ~/.gitconfig.save
+	mv ./.gitconfig ~/.gitconfig
+else
+	mv ./.gitconfig ~/.gitconfig
+fi
+#gitignore
+mv ./.gitignore-global ~/.gitignore-global
+
 #install git prompt bash
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 
