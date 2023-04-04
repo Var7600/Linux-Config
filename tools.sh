@@ -18,3 +18,5 @@ sudo apt install w3m w3m-img
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Bhupesh-V/ugit/master/install)"
 sudo apt install xcas giac-doc
 sudo apt install konsole
+sudo apt install libsdl2-dev libsdl2-doc libsdl2-gfx-dev libsdl2-gfx-doc libsdl2-image-dev
+
