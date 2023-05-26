@@ -5,6 +5,7 @@ sudo apt install git -y
 sudo apt install most -y  
 #sudo apt install code -y
 sudo apt install cppcheck -y 
+sudo apt install check -y # unit test C
 sudo apt install cppcheck-gui -y
 sudo apt install shellcheck -y
 sudo aot install tmux -y
