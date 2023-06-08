@@ -8,10 +8,9 @@ sudo apt install cppcheck -y
 sudo apt install check -y # unit test C
 sudo apt install cppcheck-gui -y
 sudo apt install shellcheck -y
-sudo aot install tmux -y
+sudo apt install tmux -y
 sudo apt install ddd -y
 sudo apt install codeblocks -y
-sudo apt install tmux -y
 sudo apt install ncdu -y
 #sudo apt-get install meld
 sudo apt install fzf -y
