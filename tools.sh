@@ -13,6 +13,7 @@ sudo apt install tmux -y
 sudo apt install ddd -y
 sudo apt install codeblocks -y
 sudo apt install ncdu -y
+sudo apt install cloc -y
 #sudo apt-get install meld
 sudo apt install fzf -y
 sudo apt install w3m w3m-img
