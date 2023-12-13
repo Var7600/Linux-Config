@@ -27,4 +27,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Bhupesh-V/ugit/master/inst
 sudo apt install xcas giac-doc # xcas computer Algebra
 sudo apt install konsole
 sudo apt install libsdl2-dev libsdl2-doc libsdl2-gfx-dev libsdl2-gfx-doc libsdl2-image-dev  # SDL2
-
+# install java
+sudo apt install openjdk-17-jdk openjdk-17-doc openjdk-17-jdk-headless openjdk-17-jre openjdk-17-jre-headless -y
