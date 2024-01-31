@@ -41,6 +41,14 @@ if [ -e ./miniconda.sh ];then
 	./miniconda.sh
 fi
 
+#installing docker
+read -p  "do you want to install docker (yes[y/Y]/no[n/N]):" answer
+#echo "your answer is ${answer}"
+
+if [[ $answer == "yes" || $answer == "y" || $answer == "Y" ]];then
+	./install-docker.sh
+fi
+
 #restart shell
 source ~/.bashrc
 
