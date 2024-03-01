@@ -64,3 +64,7 @@ sites/*/modules/development
 *.log
 *.sql
 *.sqlite
+
+# vim and emacs save file #
+###########################
+*.un~
