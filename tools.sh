@@ -35,3 +35,10 @@ sudo apt install zeal -y
 sudo apt-add-repository ppa:octave/stable # add octave repository
 sudo apt install octave -y
 # end octave
+
+# install pip,jupyter Notebook,python data analyst libraries for python3
+sudo apt install python3-pip
+pip3 install ipython
+pip3 install Jupyter
+pip3 install numpy pandas matplotlib
+# end python3
