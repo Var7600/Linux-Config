@@ -42,3 +42,7 @@ pip3 install ipython
 pip3 install Jupyter
 pip3 install numpy pandas matplotlib
 # end python3
+
+# ghdl
+sudo apt install ghdl ghdl-common ghdl-tools -y
+# end ghdl
