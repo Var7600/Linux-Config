@@ -30,6 +30,8 @@ sudo apt install xcas giac-doc # xcas computer Algebra
 sudo apt install libsdl2-dev libsdl2-doc libsdl2-gfx-dev libsdl2-gfx-doc libsdl2-image-dev  # SDL2
 # Zeal Simple offline API documentation browser
 sudo apt install zeal -y
+# inxi for computer specs
+sudo apt install inxi -y
 
 # install GNU-octave
 sudo apt-add-repository ppa:octave/stable # add octave repository
