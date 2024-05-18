@@ -39,11 +39,14 @@ sudo apt install octave -y
 # end octave
 
 # install pip,jupyter Notebook,python data analyst libraries for python3
-sudo apt install python3-pip
+sudo apt install python3-pip -y
 pip3 install ipython
 pip3 install Jupyter
 pip3 install numpy pandas matplotlib
 # end python3
+
+#R-lang
+sudo apt install r-base-core -y
 
 # ghdl
 sudo apt install ghdl ghdl-common ghdl-tools -y
