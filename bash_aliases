@@ -17,14 +17,14 @@ alias zcc="gcc -g  -Wall -Werror -Wreturn-type -Wmain -Wformat-overflow -Wextra 
 alias ccW="gcc -g -Wall "
 #alias cc89='gcc -g -Wall -Werror -Wextra -pedantic -std=c89'
 alias cc90='gcc -g -Wall -Werror -Wextra -pedantic -std=c90'
-alias indentme='indent -bl'
+alias indentme='indent -blf -bli0 -ce -cdw -cli2 -cbi0 -nbc'
 alias ccE='cc -E'
 alias ccC='cc -c'
 alias cpp11='g++ -g -Wall -Wextra -pedantic -Werror -std=c++11'
 alias cpp17='g++ -g -Wall -pedantic -Werror -std=c++17'
 alias cppcheck='cppcheck --enable=all'
 
-alias zcp="g++ -g  -Wall -Werror -Wmain  -Wformat-overflow -Wreturn-type -Wextra -pedantic "
+alias zcp="g++ -g  -Wall -Werror -Wmain  -Wformat-overflow -Wreturn-type -Wextra -pedantic -Wfloat-equal -Wshadow -Woverloaded-virtual "
 alias ccW="gcc -g -Wall "
 alias gs="git status"
 alias gc="git commit -m"
