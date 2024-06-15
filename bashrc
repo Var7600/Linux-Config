@@ -175,14 +175,14 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/vboxuser/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/var7600/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/vboxuser/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/vboxuser/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/var7600/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/var7600/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/vboxuser/miniconda3/bin:$PATH"
+        export PATH="/home/var7600/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
