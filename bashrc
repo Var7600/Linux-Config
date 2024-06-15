@@ -152,20 +152,20 @@ fi
 #Conversion binary decimal octal hexadecimal
 # Hexadécimal vers décimal
 h2d(){
-  echo "ibase=16; $@" | tr -s ' ' ';' | bc
+  echo "ibase=16; *@" | tr -s ' ' ';' | bc
 }
 # Décimal vers hexadécimal
 d2h(){
-  echo "obase=16; $@" | tr -s ' ' ';' | bc
+  echo "obase=16; *@" | tr -s ' ' ';' | bc
 }
  
 # Binaire vers décimal
 b2d(){
-  echo "ibase=2; $@" | tr -s ' ' ';' | bc
+  echo "ibase=2; *@" | tr -s ' ' ';' | bc
 }
 # Décimal vers binaire
 d2b(){
-  echo "obase=2; $@" | tr -s ' ' ';' | bc
+  echo "obase=2; *@" | tr -s ' ' ';' | bc
 }
 #Add Miniconda
 
@@ -188,3 +188,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# git bash prompt
+if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
+    GIT_PROMPT_ONLY_IN_REPO=1
+    source "$HOME/.bash-git-prompt/gitprompt.sh"
+fi
