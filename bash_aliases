@@ -10,6 +10,7 @@ alias cls='clear'
 alias nano='nano -l'
 alias mv='mv -iv'
 alias cp='cp -p -a -i'
+alias v='vim'
 alias mtmux='tmux new -s RONDIA \; split-window \; select-layout even-horizontal'
 alias idle='/usr/bin/idle-python3.8'
 alias zcc="gcc -g  -Wall -Werror -Wreturn-type -Wmain -Wformat-overflow -Wextra -pedantic -std=c11"
