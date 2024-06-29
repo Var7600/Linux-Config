@@ -15,7 +15,7 @@ sudo apt update
 sudo apt install codium
 # end vscodium
 
-sudo apt install cppcheck -y #static C++ analyzer 
+sudo apt install cppcheck -y # static C++ analyzer 
 sudo apt install cppcheck-gui -y # GUI
 sudo apt install check -y # unit test C
 sudo apt install shellcheck -y    # lint bash
@@ -23,8 +23,8 @@ sudo apt install tmux -y
 sudo apt install ddd -y # data display debugger for gdb
 sudo apt install codeblocks -y    # C/C++ editors
 sudo apt install ncdu -y
-sudo apt install cloc -y #sofware metrics tool
-#sudo apt-get install meld
+sudo apt install cloc -y # sofware metrics tool
+# sudo apt-get install meld
 sudo apt install fzf -y
 sudo apt install w3m w3m-img # terminal browser
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Bhupesh-V/ugit/master/install)"  # ugit undo git
@@ -42,12 +42,13 @@ sudo apt install octave -y
 
 # install pip,jupyter Notebook,python data analyst libraries for python3
 sudo apt install python3-pip -y
+sudo apt install idle3 -y
 pip3 install ipython
 pip3 install Jupyter
 pip3 install numpy pandas matplotlib
 # end python3
 
-#R-lang
+# R-lang
 sudo apt install r-base-core -y
 
 # ghdl
