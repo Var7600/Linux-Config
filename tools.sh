@@ -5,6 +5,7 @@ sudo apt install git -y
 sudo apt install most -y  
 sudo apt install ctags -y
 sudo apt install cscope -y
+sudo apt install valgrind -y
 sudo apt install mysql-client mysql-server -y
 
 # install Vsccodium 
