@@ -1,54 +1,61 @@
 #!/bin/bash
 
-#install default utilities
+# install default utilities
 ./tools.sh
 
-#save current bashrc config to install new bashrc config
+# ctags config file
+if [ -e ~/.ctags ];then
+	mv ~/.ctags ~/.ctags.old && mv ./ctags ~/.ctags
+fi
+
+# save current bashrc config to install new bashrc config
 mv ~/.bashrc ~/.bashrc.old && cp ./bashrc ~/.bashrc 
 
-#aliases
+
+# aliases
 if [ -e ~/.bash_aliases ];then
 	mv ~/bash_aliases ~/.bash_aliases.old && cp ./bash_aliases ~/.bash_aliases
 else
 	cp ./bash_aliases ~/.bash_aliases
 fi
 
-#copie folder Script to HOME
+# copie folder Script to HOME
 cp -R ./Script/ ~/
 
-#git config file
+# git config file
 if [ -e ~/.gitconfig ];then
 	mv ~/.gitconfig ~/.gitconfig.save
 	mv ./.gitconfig ~/.gitconfig
 else
 	mv ./.gitconfig ~/.gitconfig
 fi
-#gitignore
+
+# gitignore
 mv ./.gitignore-global ~/.gitignore-global
 
-#install git prompt bash
+# install git prompt bash
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 
-#install tmux config
+# install tmux config
 if [ -e ~/.tmux.conf ];then
 	mv ~/.tmux.conf ~/tmux.conf.old && cp ./tmux.conf ~/.tmux.conf
 else
 	cp ./tmux.conf ~/.tmux.conf
 fi
 
-#install miniconda
+# install miniconda
 if [ -e ./miniconda.sh ];then
 	./miniconda.sh
 fi
 
-#installing docker
-read -p  "do you want to install docker (yes[y/Y]/no[n/N]):" answer
-#echo "your answer is ${answer}"
+# installing docker
+read -r  -p  "do you want to install docker (yes[y/Y]/no[n/N]):" answer
+# echo "your answer is ${answer}"
 
 if [[ $answer == "yes" || $answer == "y" || $answer == "Y" ]];then
 	./install-docker.sh
 fi
 
-#restart shell
+# restart shell
 source ~/.bashrc
 

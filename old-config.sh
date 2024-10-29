@@ -1,8 +1,14 @@
 #!/bin/bash
-#old bashrc config
+
+# old bashrc config
 rm ~/.bashrc && mv ~/.bashrc.old ~/.bashrc
-#old tmux config
+
+# old tmux config
 rm ~/.tmux.conf && mv ~/.tmux.conf.old ~/.tmux.conf
-#old aliases
+
+# old aliases
 rm ~/.bash_aliases && mv ~/.bash_aliases.old ~/.bash_aliases
+
+# old ctags comfig
+rm ~/.ctags && mv ~/.ctags.old ~/.ctags
 
