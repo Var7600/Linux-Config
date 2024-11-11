@@ -36,7 +36,8 @@ sudo apt install libsdl2-dev libsdl2-doc libsdl2-gfx-dev libsdl2-gfx-doc libsdl2
 sudo apt install zeal -y
 # inxi for computer specs
 sudo apt install inxi -y
-
+# install imageMagick
+sudo apt install imagemagick -y
 # install GNU-octave
 sudo apt-add-repository ppa:octave/stable # add octave repository
 sudo apt install octave -y
