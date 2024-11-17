@@ -32,7 +32,7 @@ function rm
 				force) opt_force=1;;
 				interactive) opt_interactive=1;;
 				recursive) opt_recursive=1;;
-				verbose) opt_verbose =1 ;;
+				verbose) opt_verbose=1 ;;
 				help) /bin/rm --help
 					echo "rm_secure:"
 					echo " -e --empty vider la corbeille"
@@ -54,7 +54,7 @@ function rm
 		esac
 	done
 		# OPTIND indice des arguments fournies si ts ls arguments sont fournis elle est a n + 1
-	shift $(($OPTIND -1)) # shift n decale les arguments en supprimant les n premiers
+	shift "$($OPTIND -1)" # shift n decale les arguments en supprimant les n premiers
 
 	#Creer eventuellement le repertoire
 	if [ ! -d "$sauvegarde_rm" ] ; then
@@ -67,8 +67,8 @@ function rm
 	fi
 #liste des fichiers sauves
 	if [ $opt_list -ne 0 ]; then
-		( cd "$sauvegarde_rm" 
-		ls -lRa *)
+		( cd "$sauvegarde_rm" || exit 
+		ls -lRa ./*)
 	fi
 #recuperation de fichiers
 	if [ $opt_restore -ne 0 ] ; then
@@ -85,8 +85,8 @@ function rm
 			then
 			local reponse
 			echo -n "Detruire $1 ?"
-			read response
-			if [ $response != 'y' ] && [ "$response" != "Y" ] &&
+			read -r response
+			if [ "$response" != 'y' ] && [ "$response" != "Y" ] &&
 			   [ "$reponse" != "o" ] && [ "$reponse" != "O" ]; then
 				shift #sert a eliminer ce qu'on vient de traiter
 				continue
@@ -106,4 +106,4 @@ function rm
 	done
 	
 }
-trap "/bin/rm -rf $sauvegarde_rm" EXIT #la commande trap permet la gestion minimale des signaux
+trap '/bin/rm -rf $sauvegarde_rm' EXIT #la commande trap permet la gestion minimale des signaux
