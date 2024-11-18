@@ -19,8 +19,18 @@ else
 	cp ./bash_aliases ~/.bash_aliases
 fi
 
-# copie folder Script to HOME
-cp -R ./Script/ ~/
+# install SCripts folder to  $HOME/Scripts
+if  [ ! -d "$HOME/Scripts/" ];then
+		mkdir "$HOME/Scripts/"
+fi
+
+read -r -p "copy actual to $HOME/Scripts/ folder?:" response
+if [ "$response" == 'y' ] || [ "$response" == 'Y' ]; then
+		cp -R ./Scripts/ "$HOME/Scripts/"
+fi
+
+# add Scripts to path
+export PATH=$HOME/Scripts/:$PATH
 
 # git config file
 if [ -e ~/.gitconfig ];then
