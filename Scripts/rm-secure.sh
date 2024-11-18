@@ -69,8 +69,7 @@ function rm {
 
     # list files in the trash
     if [ $opt_list -ne 0 ]; then
-        ( cd "$sauvegarde_rm" || exit
-        ls -lRa ./*)
+        ( cd "$sauvegarde_rm" &&  ls -lRa ./)
     fi
 
     # restore trash files
