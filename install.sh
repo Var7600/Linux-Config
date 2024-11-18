@@ -25,12 +25,12 @@ if  [ ! -d "$HOME/Scripts/" ];then
 fi
 
 read -r -p "copy actual to $HOME/Scripts/ folder?:" response
-if [ "$response" == 'y' ] || [ "$response" == 'Y' ]; then
+if [ "$response" == "y" ] || [ "$response" == "Y" ]; then
 		cp -R ./Scripts/ "$HOME/Scripts/"
+		# add Scripts to path
+		export PATH=$HOME/Scripts/:$PATH
 fi
 
-# add Scripts to path
-export PATH=$HOME/Scripts/:$PATH
 
 # git config file
 if [ -e ~/.gitconfig ];then
