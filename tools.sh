@@ -4,6 +4,7 @@ sudo apt install build-essential -y
 sudo apt install git -y  
 sudo apt install cmake -y
 sudo apt install most -y  
+sudo apt install bats -y
 sudo apt install tree -y  
 sudo apt install exuberant-ctags -y
 sudo apt install cscope -y
