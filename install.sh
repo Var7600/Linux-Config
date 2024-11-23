@@ -58,6 +58,19 @@ if [ -e ./miniconda.sh ];then
 	./miniconda.sh
 fi
 
+#################################################
+# install dep packages in ../deb-packages/ folder
+#################################################
+
+# get all the the deb packages in folder
+packages=$(cd ./dep-packages && ls)
+
+for pkg in $packages;do
+	echo "installing $pkg ..."
+	sudo dpkg -i "$pkg"
+done
+
+
 # installing docker
 read -r  -p  "do you want to install docker (yes[y/Y]/no[n/N]):" answer
 # echo "your answer is ${answer}"
