@@ -63,7 +63,7 @@ fi
 #################################################
 
 # get all the the deb packages in folder
-packages=$(cd ./dep-packages && ls)
+packages=$(cd ./deb-packages && ls)
 
 for pkg in $packages;do
 	echo "installing $pkg ..."

@@ -7,13 +7,13 @@ sudo apt install build-essential
 #----------------------------------
 cli="./cli-tools.txt"
 read -r -p "install cli tools?(y/n): " tool
-if [ "$tool" == "y" || "$tool" == "Y" ];then
+if [ "$tool" == "y" ] || [ "$tool" == "Y" ];then
 	# read file install apps
 	while IFS= read -r line
 	do
 		echo "installing $line ..."
 		sudo apt install "$line" -y
-	done < "$input"
+	done < "$cli"
 fi
 
 
@@ -23,7 +23,7 @@ fi
 #--------------------------------------
 path="./gui-apps.txt"
 read -r -p "install gui apps?(y/n): " gui
-if [ "$gui" == "y" || "$gui" == "Y" ];then
+if [ "$gui" == "y" ] || [ "$gui" == "Y" ];then
 	# read file install apps
 	while IFS= read -r line
 	do
@@ -45,7 +45,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Bhupesh-V/ugit/master/inst
 sudo apt install libsdl2-dev libsdl2-doc libsdl2-gfx-dev libsdl2-gfx-doc libsdl2-image-dev 
 
 read -r -p "install VsCodium:(y/n)?: " vs
-if [ "$vs" == "Y" || "$vs" == "y" ];then
+if [ "$vs" == "Y" ] || [ "$vs" == "y" ];then
 
 	# install Vsccodium 
 	sudo apt install dirmngr software-properties-common apt-transport-https curl -y
@@ -58,7 +58,7 @@ fi
 
 # install GNU-octave
 read -r -p "install Octave?(y/n): " oct
-if [ "$vs" == "Y" || "$vs" == "y" ];then
+if [ "$vs" == "Y" ] || [ "$vs" == "y" ];then
 	sudo apt-add-repository ppa:octave/stable # add octave repository
 	sudo apt install octave -y
 	# end octave
