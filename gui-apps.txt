@@ -1,0 +1,6 @@
+parcellite
+codeblocks
+ncdu
+meld
+xcas 
+giac-doc

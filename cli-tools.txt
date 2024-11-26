@@ -1,0 +1,15 @@
+git  
+cmake 
+most  
+bats
+shellcheck
+tmux
+fzf
+w3m w3m-img
+imagemagick
+inxi
+tree  
+exuberant-ctags 
+cscope 
+valgrind 
+mysql-client mysql-server

@@ -1,54 +1,72 @@
 #!/bin/bash
 
-sudo apt install build-essential -y 
-sudo apt install git -y  
-sudo apt install cmake -y
-sudo apt install most -y  
-sudo apt install bats -y
-sudo apt install parcellite -y
-sudo apt install tree -y  
-sudo apt install exuberant-ctags -y
-sudo apt install cscope -y
-sudo apt install valgrind -y
-sudo apt install mysql-client mysql-server -y
+sudo apt install build-essential 
 
-# install Vsccodium 
-sudo apt install dirmngr software-properties-common apt-transport-https curl -y
-curl -fSsL https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo gpg --dearmor | sudo tee /usr/share/keyrings/vscodium.gpg >/dev/null
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/vscodium.gpg] https://download.vscodium.com/debs vscodium main" | sudo tee /etc/apt/sources.list.d/vscodium.list
-sudo apt update
-sudo apt install codium
-# end vscodium
+#-----------------------------------
+# cli tools
+#----------------------------------
+cli="./cli-tools.txt"
+read -r -p "install cli tools?(y/n): " tool
+if [ "$tool" == "y" || "$tool" == "Y" ];then
+	# read file install apps
+	while IFS= read -r line
+	do
+		echo "installing $line ..."
+		sudo apt install "$line" -y
+	done < "$input"
+fi
 
-sudo apt install cppcheck -y # static C++ analyzer 
-sudo apt install cppcheck-gui -y # GUI
-sudo apt install check -y # unit test C
-sudo apt install shellcheck -y    # lint bash
-sudo apt install tmux -y
-sudo apt install ddd -y # data display debugger for gdb
-sudo apt install codeblocks -y    # C/C++ editors
-sudo apt install ncdu -y
-sudo apt install cloc -y # sofware metrics tool
-# sudo apt-get install meld
-sudo apt install fzf -y
-sudo apt install w3m w3m-img # terminal browser
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Bhupesh-V/ugit/master/install)"  # ugit undo git
-sudo apt install xcas giac-doc # xcas computer Algebra
-sudo apt install libsdl2-dev libsdl2-doc libsdl2-gfx-dev libsdl2-gfx-doc libsdl2-image-dev  # SDL2
-# Zeal Simple offline API documentation browser
-sudo apt install zeal -y
-# inxi for computer specs
-sudo apt install inxi -y
-# install imageMagick
-sudo apt install imagemagick -y
+
+
+#-------------------------------------
+# GUI tools
+#--------------------------------------
+path="./gui-apps.txt"
+read -r -p "install gui apps?(y/n): " gui
+if [ "$gui" == "y" || "$gui" == "Y" ];then
+	# read file install apps
+	while IFS= read -r line
+	do
+		echo "installing $line ..."
+		sudo apt install "$line" -y
+	done < "$input"
+fi
+
+
+
+
+
+# ugit undo git
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Bhupesh-V/ugit/master/install)"  
+
+#--------------------
+# SDL2
+#---------------------
+sudo apt install libsdl2-dev libsdl2-doc libsdl2-gfx-dev libsdl2-gfx-doc libsdl2-image-dev 
+
+read -r -p "install VsCodium:(y/n)?: " vs
+if [ "$vs" == "Y" || "$vs" == "y" ];then
+
+	# install Vsccodium 
+	sudo apt install dirmngr software-properties-common apt-transport-https curl -y
+	curl -fSsL https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo gpg --dearmor | sudo tee /usr/share/keyrings/vscodium.gpg >/dev/null
+	echo "deb [arch=amd64 signed-by=/usr/share/keyrings/vscodium.gpg] https://download.vscodium.com/debs vscodium main" | sudo tee /etc/apt/sources.list.d/vscodium.list
+	sudo apt update
+	sudo apt install codium
+	# end vscodium
+fi
+
 # install GNU-octave
-sudo apt-add-repository ppa:octave/stable # add octave repository
-sudo apt install octave -y
-# end octave
+read -r -p "install Octave?(y/n): " oct
+if [ "$vs" == "Y" || "$vs" == "y" ];then
+	sudo apt-add-repository ppa:octave/stable # add octave repository
+	sudo apt install octave -y
+	# end octave
+fi
 
+echo "installing  pip,jupyter Notebook,python data analyst libraries for python3"
 # install pip,jupyter Notebook,python data analyst libraries for python3
 sudo apt install python3-pip -y
-sudo apt install idle3 -y
 pip3 install ipython
 pip3 install Jupyter
 pip3 install numpy pandas matplotlib
@@ -58,5 +76,6 @@ pip3 install numpy pandas matplotlib
 sudo apt install r-base-core -y
 
 # ghdl
+echo "install ghdl"
 sudo apt install ghdl ghdl-common ghdl-tools -y
 # end ghdl
