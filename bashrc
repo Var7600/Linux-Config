@@ -3,12 +3,12 @@
 # for examples
 
 # script rm_Secure
-if [ -d ~/Script/ ];then
-		. ~/Script/rm-secure.sh
+if [ -d ~/Scripts/ ];then
+		. ~/Scripts/rm-secure.sh
 fi
 
  #Extend path
-export PATH="$PATH:$HOME/Script/"
+export PATH="$PATH:$HOME/Scripts/"
 
 export VISUAL=vim
 
@@ -18,8 +18,8 @@ export PAGER="most"
 
 #ADD:Colorization /usr/bin/bash 
 
-if [ -f ~/Script/prompt/costumize.sh ];then
-	. ~/Script/prompt/costumize.sh
+if [ -f ~/Scripts/prompt/costumize.sh ];then
+	. ~/Scripts/prompt/costumize.sh
 fi
 
 
