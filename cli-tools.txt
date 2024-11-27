@@ -9,7 +9,7 @@ w3m w3m-img
 imagemagick
 inxi
 tree  
-exuberant-ctags 
+universal-ctags 
 bat
 cscope 
 valgrind 
