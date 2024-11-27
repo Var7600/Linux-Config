@@ -4,7 +4,7 @@
 
 # script rm_Secure
 if [ -d ~/Script/ ];then
-		. ~/Script/rm_secure.sh
+		. ~/Script/rm-secure.sh
 fi
 
  #Extend path
