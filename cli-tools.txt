@@ -10,6 +10,8 @@ imagemagick
 inxi
 tree  
 exuberant-ctags 
+bat
 cscope 
 valgrind 
-mysql-client mysql-server
+mysql-client 
+mysql-server
