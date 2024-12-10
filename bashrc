@@ -2,10 +2,13 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# script rm_Secure
+# source script snippets and  rm_Secure
 if [ -d ~/Scripts/ ];then
-		. ~/Scripts/rm-secure.sh
+	. ~/Scripts/rm-secure.sh
+	. ~/Scripts/snippets.sh
 fi
+
+
 
  #Extend path
 export PATH="$PATH:$HOME/Scripts/"
