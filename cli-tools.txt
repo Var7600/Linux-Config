@@ -2,7 +2,8 @@ git
 gh
 figlet
 toilet
-cmake 
+cmake
+alire
 most  
 bats
 shellcheck
