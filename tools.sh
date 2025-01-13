@@ -58,7 +58,7 @@ fi
 
 # install GNU-octave
 read -r -p "install Octave?(y/n): " oct
-if [ "$vs" == "Y" ] || [ "$vs" == "y" ];then
+if [ "$oct" == "Y" ] || [ "$oct" == "y" ];then
 	sudo apt-add-repository ppa:octave/stable # add octave repository
 	sudo apt install octave -y
 	# end octave

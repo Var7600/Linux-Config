@@ -4,3 +4,4 @@ ncdu
 meld
 xcas 
 giac-doc
+zeal
