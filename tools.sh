@@ -1,6 +1,8 @@
 #!/bin/bash
 
 sudo apt install build-essential 
+sudo apt install openjdk-21-jre
+sudo apt install openjdk-21-jdk
 
 #-----------------------------------
 # cli tools
