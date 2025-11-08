@@ -5,7 +5,9 @@
 
 # ctags config file
 if [ -e ~/.ctags ];then
-	mv ~/.ctags ~/.ctags.old && mv ./ctags ~/.ctags
+	mv ~/.ctags ~/.ctags.old && cp ./ctags ~/.ctags
+else 
+	cp ./ctags ~/.ctags
 fi
 
 # save current bashrc config to install new bashrc config
