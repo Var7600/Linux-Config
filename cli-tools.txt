@@ -9,6 +9,7 @@ bats
 shellcheck
 tmux
 fzf
+ffmpeg
 w3m w3m-img
 imagemagick
 inxi
