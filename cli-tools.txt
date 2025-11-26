@@ -21,3 +21,4 @@ tree
 universal-ctags 
 valgrind 
 w3m w3m-img
+gnat-12
